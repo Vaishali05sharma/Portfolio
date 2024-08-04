@@ -1,0 +1,1214 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Be Vietnam Pro", sans-serif;
+    scroll-behavior: smooth;
+    
+}
+/* WRAPPER */
+#wrapper{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: white;
+   
+}
+#nav{
+    height: 25%;
+    width: 90%;
+    margin: 0 5% 0 5%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    /* justify-content:space-between; */
+}
+#logo{
+    /* background-color: yellow; */
+    font-size: 3rem;
+    width: 50%;
+    padding-left: 3rem;
+}
+/* NAV ITEMS */
+#nav_items{
+    /* background-color: pink; */
+    font-size: 1.8rem;
+    width: 50%;
+    cursor: pointer;
+}
+#nav_items ul{
+    list-style: none;
+}
+#nav_items ul li{
+    display: inline-block;
+    padding-left: 2rem;
+}
+#nav_items a{
+    text-decoration: none;
+    color:rgb(137, 134, 134);
+    transition: all 0.8s;
+    font-weight:300;
+}
+
+#nav_items a:hover{
+    color: black;   
+}
+#logo{
+    display: flex;
+}
+#logo span{
+    /* background-color: yellow; */
+    /* display: inline-block; */
+    box-sizing: border-box;
+    padding-top:1.5rem;
+    margin-left: -1.4rem;
+    font-style: italic;
+}
+/* HERO SECTION  */
+#hero{
+    /* background-color: aqua; */
+    min-height:100vh;
+    width: 90%;
+    margin:0 5% 0 5%;
+    position: relative;
+}
+.hero_up{
+    display: flex;
+}
+#write{
+    /* background-color: burlywood; */
+    width: 50%;
+    padding:2rem;
+}
+.vais{
+    font-size:3rem;
+    color: #e84949;
+}
+#write p{
+    font-size: 1.5rem;
+    font-style: italic;
+}
+.role_move{
+    display: flex;
+    font-size: 2.7rem;
+}
+.role{
+    color: #4e45d5;
+    font-weight: 500;
+    margin-left: 1rem;
+    
+}
+.button{
+    height:70px;
+    width: 140px;
+    background-color: #e84949;
+    color: white;
+    text-align: center;
+    font-size: 1.4rem;
+    box-shadow: 4px 4px 4px 0px rgb(89, 79, 79);
+    position: relative;
+    z-index: 1;
+    border: none;
+    border-radius: 5%;
+    margin-top: 1.3rem;
+}
+.button::before{
+    content:"";
+    position: absolute;
+    background-color:rgba(255, 255, 255, 0.925);
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom:0%;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin:left;
+    transition: all 1s;
+}
+.button:hover::before{
+    transform: scaleX(1);
+}
+.button:hover{
+   color: #e84949;
+   border: 5px solid  #e84949;
+}
+#photo{
+    /* background-color: cornflowerblue; */
+    width: 50%;
+}
+#pic{
+    position: relative;
+    background-color:white;
+    margin: 2rem;
+    margin-left: 9rem;
+    height: 64%;
+    width: 60%;
+    box-shadow: 5px 5px 5px 5px rgb(112, 111, 111);
+    transition: all 2s;
+}
+#pic:hover{
+    scale: 1.07;
+}
+
+#image{
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    background-image: url(./images/femal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 2.4rem;
+    filter: grayscale(0%);
+    z-index:1;
+}
+#image:hover{
+    filter: grayscale(100%);
+}
+
+.hero1{
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    z-index:2;
+    animation-name:dotsAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes dotsAnimation {
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+    
+  }
+.hero2{
+    position: absolute;
+    top: -10%;
+    right: 0%;
+    z-index:2;
+    animation-name: cubeRotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes cubeRotate {
+    0%{
+        transform: rotateY(0deg) translateY(0px);
+    }
+    50%{
+        transform:  rotateY(180deg) translateY(-12px);
+    }
+    100%{
+        transform:  rotateY(360deg) translateY(0px);
+    }
+  }
+.hero3{
+    position: absolute;
+    bottom: 0%;
+    left: 4%;
+    z-index:2;
+    animation-name:shakeEffect;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes shakeEffect {
+  
+    50%{
+        left:5%;
+        bottom:10%;
+    }
+ 
+  }
+.hero4{
+    position: absolute;
+    left: -1%;
+    top: 3%;
+    z-index:2;
+    animation:zigzagAnimation 5s ease-in infinite;
+}
+@keyframes zigzagAnimation{
+    50%{
+        left:5%;
+        top:2%;
+    }
+  }
+.hero5{
+    position: absolute;
+    left:50%;
+    top:0%;
+    z-index:2;
+    animation:shakeEffectPlus 5s ease-in infinite;
+}
+@keyframes shakeEffectPlus {
+    50%{
+        top:3%;
+        left:48%
+    }
+  }
+.faded_text{
+    /* background-color: yellow; */
+    display: inline-block;
+    color:rgb(231, 231, 231);
+    user-select: none;
+    font-size:7rem;
+    font-weight:580;
+    position: absolute;
+    left:-5%;
+    bottom:-5%;
+}
+#project{
+    min-height:100vh;
+    /* margin: 0% 5% 0% 5%; */
+    background-color: rgb(231, 231, 231);
+    
+}
+#project_container{
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+#project h1{
+    color: #e84949;
+    font-size: 5rem;
+    padding-top:2rem;
+    text-align: center;
+    transition: all 0.5s;
+    margin-bottom:1rem;
+}
+#project h1:hover{
+
+    font-size: 7rem;
+    font-weight: bold;
+
+}
+.card_container{
+    min-height: 100vh;
+    margin-left: 6rem;
+    margin-top: -2rem;
+    /* background-color: yellow; */
+}
+.card{
+    height:70vh;
+    width: 70vw;
+    margin: 3rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    transition: all 1s;
+    position: relative;
+   
+}
+.card::before{
+    content:"";
+    position: absolute;
+    background:linear-gradient(45deg, #343d68, #343d68be, #343d687c);
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom:0%;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin:left;
+    transition: all 0.5s;
+}
+.card:hover::before{
+    transform: scaleX(1);
+}
+.card:hover{
+    scale:1.05;
+}
+.card:hover .number{
+    display: block;
+    scale: 1.03;
+}
+.card_1{
+   background-image:linear-gradient(45deg,  #363638, #191b20be, #2d2c2e2a),url(./images/Project1.png);
+   position: relative;
+   display: flex;
+   /* opacity: 0.7; */
+  
+}
+.no_left{
+    left: 0%;
+}
+.text_1{
+    position: absolute;
+    background:transparent;
+    top:20%;
+    left: 10%;
+    right: 40%;
+    bottom: 6%;
+    z-index: 2;
+    filter:none;
+    transition: all 1s;
+    
+    
+}
+.number{
+    position: absolute;
+    background:transparent;
+    top: 0%;
+    right:0%;
+    height: 8rem;
+    width: 10rem;
+    color:white;
+    font-size: 6rem;
+    text-align: center;
+    font-weight: 600;
+    z-index:2;
+    text-shadow: 2px 2px 2px rgb(246, 244, 244);
+    /* filter: blur(10px); */
+    transition: all 1s;
+    display: none;
+
+}
+
+.icons{
+    /* background-color: #e84949; */
+    margin-top: 1rem;
+}
+.text h2{
+    color: white;
+    font-weight: bold;
+    font-size:2rem;
+    margin-top:0.2rem;
+}
+.btn_project{
+   height:8vh;
+   width: 8vw;
+   margin: 1rem;
+    background-color: #e84949;
+    border: none;
+    color:white;
+    font-size: 1.2rem;
+
+}
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+.text h4{
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    font-style: italic;
+}.btn{
+    display: flex;
+    /* background-color: yellow; */
+}
+.btn a{
+    /* background-color: green; */
+    width: 15%;
+  
+}
+.btn a i {
+    scale: 2.5;
+    padding-top:1.5rem; 
+    padding-left: 1rem;
+}
+#two{
+    padding-right: -20rem;
+}
+ .btn a i:hover{
+    color: #e84949;
+}
+.text:hover{
+    scale: 1.1;
+}
+.card_2{
+    margin-left:13rem;
+    background-image:linear-gradient(45deg,  #363638, #191b20be, #2d2c2e2a), url(./images/Project2.png); 
+}
+.text_2{
+    position: absolute;
+    background:transparent;
+    top:20%;
+    left: 40%;
+    right: 10%;
+    bottom: 6%;
+    z-index: 2;
+    filter:none;
+    transition: all 1s;
+    
+}
+.card_3{
+    background-image:linear-gradient(45deg,  #363638, #191b20be, #2d2c2e2a), url(./images/Project3.png);
+}
+.text_3{
+    position: absolute;
+    background:transparent;
+    top:20%;
+    left: 10%;
+    right: 40%;
+    bottom: 6%;
+    z-index: 2;
+    filter:none;
+    transition: all 1s;
+    
+}
+.card_4{
+    margin-left:13rem;
+    background-image:linear-gradient(45deg,  #363638, #191b20be, #2d2c2e2a), url(./images/Project4.png);
+    
+}
+.text_4{
+    position: absolute;
+    background:transparent;
+    top:20%;
+    left: 40%;
+    right: 10%;
+    bottom: 6%;
+    z-index: 2;
+    filter:none;
+    transition: all 1s;
+    
+}
+#skill{
+    display:flex;
+   /* background-color: rgb(188, 118, 28); */
+   
+}
+
+.description{
+    width: 50%;
+    /* height: 100vh; */
+    /* background-color: rgb(26, 141, 141); */
+    margin: 2% 0% 0% 5%;
+    overflow-y: hidden;
+}
+.description h1{
+    color: #e84949;
+    font-size:4rem;
+    letter-spacing:-0.3rem;
+    margin:1.7rem;
+    
+}
+.description p{
+    margin:1.7rem;
+    font-size:1.11rem;
+    font-style: italic;
+}
+.description pre{
+    font-size:1.19rem;
+    font-weight: 600;
+}
+.skill_icon{
+    width: 50%;
+    /* height: 80vh; */
+    margin: 2% 5% 0% 0%;
+    /* overflow-y: hidden; */
+    /* background-color: darkblue; */
+    position: relative;
+   
+}
+.skill_icon img{
+    height: 18%;
+    width: 20%;
+    margin:1.15rem;
+    margin-left: 3rem;
+    position: relative;
+    z-index: 9;
+    
+ 
+}
+.bubble{
+    height: 45%;
+    width: 40%;
+    background-color:rgb(231, 231, 231);
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    border-radius: 70% 80% ;
+     border-top-right-radius:16%;
+    border-top-left-radius: 26%; 
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius:74%;
+    transform:rotate(35deg);
+   animation-name: move;
+   animation-timing-function:linear;
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   /* overflow-x: hidden;
+    overflow-y: hidden; */
+    z-index:1;
+}
+@keyframes move{
+    from{
+        transform: translate(-15% ,-13%);
+    }
+    to{
+        transform: translate(-10%, -29%);
+    }
+}
+#skill_set{
+    min-height: 100vh;
+    display: flex;
+    background-color:rgb(231, 231, 231);
+    padding:3vh;
+    box-sizing: border-box;
+    
+}
+.skill_set_1{
+    width: 50%;
+    height: 80vh;
+    margin-left:5vw;
+    margin-top:3vh;
+    padding: 5vh;
+    color: black;
+    font-weight: 500;
+    font-size: 2vw;
+    /* background-color: green; */
+}
+.skill_set_1 p {
+    font-size:3vw;
+    font-weight: bold;
+    color: #e84949;
+    margin-bottom: 3vh;
+}
+.skill_set_1 .c,.excel,.frontend,.backend,.react{
+    height: 60px;
+    margin-top: 10px;
+    width:80%;
+    /* background-color: rgb(121, 85, 85); */
+}
+.c div,.excel div,.frontend div,.backend div,.react div{
+    height: 12px;
+    width:100%;
+    margin-top: 10px;
+    border-radius:3%;
+    background-color:rgb(182, 180, 180);
+}
+.c div p{
+    height: 100%;
+    width:90%;
+    background-color: #343d68;
+}
+.excel div p{
+    height: 100%;
+    width:90%;
+    background-color: #343d68;
+}
+.frontend div p{
+    height: 100%;
+    width:60%;
+    background-color: #343d68;
+}
+.backend div p{
+    height: 100%;
+    width:75%;
+    background-color: #343d68;
+}
+.react div p{
+    height: 100%;
+    width:85%;
+    background-color: #343d68;
+}
+.skill_set_2{
+    height: 80vh;
+    width: 50%;
+    /* background-color: #e84949; */
+    margin-top: 3vh;
+   padding-left: 7vw;
+   padding-top: 2vh;
+}
+#edu{
+    min-height: 100vh;
+   
+}
+.heading{
+    text-align: center;
+    color: #343d68;
+    font-weight: bold;
+    font-size: 5rem;
+    transition: all 1s;
+   
+}
+.heading:hover{
+    scale: 1.2;
+}
+.edu_container{
+    min-height: 100vh;
+    margin: 2% 5% 0% 5%;
+    display: flex;
+    margin-bottom: 5rem;
+    /* background-color: yellow; */
+}
+.edu_card{
+    height:75vh;
+    width:33vw;
+    margin: 1rem;
+    box-sizing: border-box;
+    padding: 2rem;
+    background-color:#343d68;
+    color:rgb(242, 239, 239);
+    box-shadow: 5px 5px 5px 0 #51587c;
+}
+.edu_card h1{
+    display:inline-block;
+    margin-bottom:1rem;
+    transition: linear 1s;
+    font-size:2.9rem;
+    /* background-color: yellow; */
+}
+.edu_card h2{
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+}
+.edu_card h3{
+    font-style: italic;
+}
+.edu_card h1:hover{
+    scale: 1.3;
+    color: #e84949;
+}
+.edu_image{
+    height: 30vh;
+    width:23.5vw;
+    margin-bottom: 1rem;
+    /* margin: 1rem; */
+    /* margin-left:2rem; */
+    background-color: #e84949;
+    transition: all 2s;
+}
+.img1{
+    background-image: url(./images/dcrust.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.img2{
+    background-image: url(./images/vmps.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.img3{
+    background-image: url(./images/dav.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.edu_image:hover{
+    scale: 1.1;
+}
+.edu_btn{
+    height:12%;
+    width: 35%;
+    border-radius: 0%;
+    margin-left: 7rem;
+    transition: all 1s;
+}
+.edu_btn:hover{
+    scale: 1.4;
+}
+.edu_wrap{
+      position: relative;
+}
+.skill_text{
+    /* background-color: yellow; */
+    display: inline-block;
+    user-select: none;
+    font-size: 8.5rem;
+    color: rgb(231, 231, 231);
+    font-weight: 540;
+    position: absolute;
+    right: 0%;
+    bottom:-14%
+   
+}
+#contact{
+    background-color: rgb(231, 231, 231);
+}
+.contact_container{
+    margin: 0% 5% 0% 5%;
+    /* height: 100vh; */
+    /* width: 90vw; */
+}
+.contact{
+    color: #e84949;
+    font-weight: 500;
+    font-size: 5rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+.ques{
+    color:#343d68aa;
+    font-weight: 540;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    margin-left: 2rem;
+}
+.input_box{
+    margin: 1rem;
+    margin-left: 10rem;
+    height: 3rem;
+    width: 63rem;
+    /* background-color: yellow; */
+    border-radius:0.7rem;
+    border: none;
+    font-size: 1.3rem;
+    padding-left: 2rem;
+    box-shadow: 2px 2px 2px 0 #343d68aa;
+}
+.text_area{
+    margin: 1.5rem;
+    margin-left: 10rem;
+    height: 10rem;
+    width: 63rem;
+    border-radius:0.7rem;
+    border: none;
+    font-size: 1.3rem;
+    padding-left: 2rem;
+    box-shadow: 2px 2px 2px 0 #343d68aa;
+}
+.form_btn{
+    width: 20rem;
+    margin-left: 10rem;
+    height: 4rem;
+    border-radius:0%;
+    margin-bottom: 3rem;
+    /* margin-top: -0.2rem; */
+}
+#footer{
+    background-color: #343d68;
+    height: 35vh;
+    width: 100vw;
+}
+.footer_container{
+    display: flex;
+    height: 35vh;
+    width: 100vw;
+    color:white;
+}
+.foot_text{
+    width: 50%;
+    position: relative;
+    /* background-color: yellow; */
+}
+.foot_icon{
+    width: 50%;
+    /* background-color: pink */
+
+}
+.foot_text ul{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    margin-left: 8rem;
+}
+.foot_icon ul{
+    list-style: none;
+}
+.foot_item{
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-top: 6rem; 
+}
+.foot_item a{
+    text-decoration: none;
+    color: white;
+    padding-left: 1rem;
+}
+.foot_icon ul {
+    margin-left:20rem;
+}
+.foot_list{
+    display: inline-block;
+    font-size: 1.2rem;
+    height: 5rem;
+    width: 3.3rem;
+    margin-top: 4rem; 
+    /* background-color: yellow;  */
+}
+.foot_list a{
+    text-decoration: none;
+    color: white;
+    padding-left: 1rem;
+    transition: al 0.7s;
+    
+}
+.foot_list a i {
+    padding-top: 1rem;
+    scale: 2;
+    padding-right: -1rem;
+}
+.foot_list a:hover{
+    color: #e84949;
+}
+.foot_fade{
+    user-select: none;
+    position: absolute;
+    display: inline-block;
+    font-size: 5rem;
+    /* background-color: yellow; */
+    color:#535c87;
+    left: 0%;
+    bottom: 0%;
+
+}
+#wrap_solar{
+    height: 32rem;
+    width: 32rem;
+    box-sizing: border-box;
+    background-color: transparent;
+    /* background-image: linear-gradient(to bottom right, #38A2D7, #561139); */
+    border-radius: 50%;
+    position: relative;
+  }
+    
+      /* Properties for the Sun */
+      #sun {
+        position: absolute;
+        top: 49%;
+        left: 42.5%;
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 50%;
+      }
+      .orbit{
+        border-width: 0.01rem;
+        border-style:dotted;
+        border-color: black;
+        border-radius: 50%;
+      }
+     
+      #mercury {
+        position: absolute;
+        top: 0%;
+        left: 45%;
+        height: 2rem;
+        width: 2rem;
+        margin-left: -2px;
+        margin-top: -13px;
+      }
+    
+      /* Properties for - Position / Orbit / Radius / Rotation */
+      #mercury-orbit {
+        position: absolute;
+        top: 60%;
+        left: 57%;
+        width: 7.25rem;
+        height: 7.25rem;
+        margin-top: -5rem;
+        margin-left: -6rem;
+        /* Animating Mercury - Rotation and Speed */
+        -webkit-animation: spin-right 5s linear infinite;
+        -moz-animation: spin-right 5s linear infinite;
+        -ms-animation: spin-right 5s linear infinite;
+        -o-animation: spin-right 5s linear infinite;
+        animation: spin-right 5s linear infinite;
+      }
+      /* End of Mercury's Properties */
+    
+      /* Properties for the Venus */
+      #venus {
+        position: absolute;
+        top: 0%;
+        left: 45%;
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-left: -1.563rem;
+        margin-top: -1rem;
+      }
+    
+      /* Properties for - Position / Orbit / Radius / Rotation */
+      #venus-orbit {
+        position: absolute;
+        top: 55%;
+        left: 53%;
+        width: 10.375rem;
+        height: 10.375rem;
+        margin-top: -5rem;
+        margin-left: -6rem;
+        /* Animating Venus - Rotation and Speed */
+        -webkit-animation: spin-right 8s linear infinite;
+        -moz-animation: spin-right 8s linear infinite;
+        -ms-animation: spin-right 8s linear infinite;
+        -o-animation: spin-right 8s linear infinite;
+        animation: spin-right 8s linear infinite;
+      
+      }
+      /* End of Venus's Properties */
+    
+      /* Properties for the Earth */
+      #earth {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 2.188rem;
+        width: 2.188rem;
+        margin-left: -0.188rem;
+        margin-top: -0.813rem;
+      }
+    
+      /* Properties for - Position / Orbit / Radius / Rotation */
+      #earth-orbit {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        width: 13.5rem;
+        height:13.5rem;
+        margin-top: -2.813rem;
+        margin-left: -6.625rem;
+        /* Animating Earth - Rotation and Speed */
+        -webkit-animation: spin-right 10s linear infinite;
+        -moz-animation: spin-right 10s linear infinite;
+        -ms-animation: spin-right 10s linear infinite;
+        -o-animation: spin-right 10s linear infinite;
+        animation: spin-right 10s linear infinite;
+      }
+      /* End of Earth's Properties */
+    
+      /* Properties for the Mars */
+      #mars {
+        position: absolute;
+        top: 0%;
+        left: 45%;
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-left: -1.563rem;
+        margin-top: -1rem;
+      }
+      /* Properties for - Position / Orbit / Radius / Rotation */
+      #mars-orbit {
+        position: absolute;
+        top: 40%;
+        left: 46%;
+        width: 17rem;
+        height: 17rem;
+        margin-top: -3rem;
+        margin-left: -7rem;
+  
+        /* Animating Mars - Rotation and Speed */
+        -webkit-animation: spin-right 15s linear infinite;
+        -moz-animation: spin-right 15s linear infinite;
+        -ms-animation: spin-right 15s linear infinite;
+        -o-animation: spin-right 15s linear infinite;
+        animation: spin-right 15s linear infinite;
+      }
+      /* End of Mars' Properties */
+    
+      /* Properties for the Jupiter */
+      #jupiter {
+        position: absolute;
+        top: 0%;
+        left: 45%;
+        height: 2.813rem;
+        width: 2.813rem;
+        margin-left: -0.188;
+        margin-top: -12.25;
+      }
+    
+      /* Properties for - Position / Orbit / Radius / Rotation */
+      #jupiter-orbit {
+        position: absolute;
+        top: 35%;
+        left: 43%;
+        width: 19.75rem;
+        height: 19.75rem;
+        margin-top: -2.813rem;
+        margin-left: -6.938rem;
+        /* Animating Jupiter - Rotation and Speed */
+        -webkit-animation: spin-right 20s linear infinite;
+        -moz-animation: spin-right 20s linear infinite;
+        -ms-animation: spin-right 20s linear infinite;
+        -o-animation: spin-right 20s linear infinite;
+        animation: spin-right 20s linear infinite;
+      }
+      /* End of Jupiter's Properties */
+    
+      /* Properties for the Saturn */
+      #saturn {
+        position: absolute;
+        top: 0%;
+        left: 45%;
+        height: 3.375rem;
+        width: 3.375rem;
+        margin-left: -1.75rem;
+        margin-top: -1.313rem;
+      }
+    
+      /* Properties for - Position / Orbit / Radius / Rotation */
+      #saturn-orbit {
+        position: absolute;
+        top: 30%;
+        left: 38%;
+        width: 22.875rem;
+        height: 22.875rem;
+        margin-top: -3rem;
+        margin-left: -7.125rem;
+        /* Animating Saturn - Rotation and Speed */
+        -webkit-animation: spin-right 25s linear infinite;
+        -moz-animation: spin-right 25s linear infinite;
+        -ms-animation: spin-right 25s linear infinite;
+        -o-animation: spin-right 25s linear infinite;
+        animation: spin-right 25s linear infinite;
+      }
+    
+      /* End of Saturn's Properties */
+      /* Properties for the Uranus */
+      #uranus {
+        position: absolute;
+        top: 0%;
+        left: 45%;
+        height: 3.375rem;
+        width: 3.375rem;
+        margin-left: -1.563rem;
+        margin-top: -1.875rem;
+      }
+    
+      /* Properties for - Position / Orbit / Radius / Rotation */
+      #uranus-orbit {
+        position: absolute;
+        top: 18%;
+        left: 32%;
+        width: 27rem;
+        height: 27rem;
+        margin-top: -2rem;
+        margin-left: -7.5rem;
+        /* Animating Uranus - Rotation and Speed */
+        -webkit-animation: spin-right 30s linear infinite;
+        -moz-animation: spin-right 30s linear infinite;
+        -ms-animation: spin-right 30s linear infinite;
+        -o-animation: spin-right 30s linear infinite;
+        animation: spin-right 30s linear infinite;
+      }
+    
+  
+    
+     
+      /* Keyframes for Roatation - Right */
+      @-webkit-keyframes spin-right {
+      100% {
+          -webkit-transform: rotate(360deg);
+          -moz-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          -o-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spin-right {
+        100% {
+          -webkit-transform: rotate(360deg);
+          -moz-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          -o-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+    }
+@media(max-width:1000px){
+    #logo{
+        width: 100vw;
+    }
+    #nav_items{
+        display: none;
+    }
+    .hero_up{
+        display: block;
+    }
+    #write{
+        width: 100vw;
+        text-align: center;
+    }
+    .role_move{
+        justify-content: center;
+    }
+    #photo{
+        height:65vw;
+        width: 100vw;
+    }
+    #image{
+        margin-left:6vw;
+    }
+    .faded_text{
+        /* background-color: rebeccapurple; */
+        font-size: 4rem;
+        bottom: -1.5%;
+    }
+    .card_2 ,.card_4{
+        margin-left: 12vw;
+    }
+    .text{
+        font-size: 1rem;
+        margin: 1vh;
+        line-height:4vh;
+    }
+    .btn_project{
+        width:20vw;
+        height: 10vh;
+    }
+   .btn a{
+    height: 5vh;
+    width: 10vw;
+    margin-top: -2vh;
+   }
+   #skill{
+    display: block;
+   }
+   .description{
+    width: 100vw;
+    /* text-align: center; */
+   }
+   .description p{
+    width: 87vw;
+   }
+   .skill_icon{
+    width: 100vw;
+    margin-left: 7vw;
+   }
+   .edu_container{
+    display: block;
+   }
+   .edu_card{
+    margin: 10vw;
+    margin-left: 22vw;
+    width: 45vw;
+    height: 95vh;
+   }
+   .edu_image{
+    height: 40%;
+    width: 99%;
+    /* margin-left:2vw; */
+   }
+   .skill_text{
+    /* background-color: yellow; */
+    font-size: 5rem;
+    bottom:-7%;
+    font-weight: bold;
+    
+   }
+   .input_box , .text_area{
+    margin-left: 10vw;
+    width: 80vw;
+   }
+
+.footer_container{
+    display: block;
+    /* background-color: yellow; */
+}
+.foot_text{
+    width: 100%;
+}
+.foot_item{
+    margin-left: 1vw;
+    font-size:3vw;
+}
+.foot_icon{
+    background-color:#343d68;
+    width: 100%;
+}
+.foot_fade{
+    display: none;
+}
+}
